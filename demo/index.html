@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>censored.coffee</title>
+    <link href='http://fonts.googleapis.com/css?family=Signika+Negative:300,400' rel='stylesheet' type='text/css'>
+    <link href="stylesheets/reset.css" rel="stylesheet" />
+    <link href="stylesheets/main.css" rel="stylesheet" />
+    <link href="../src/censored.css" rel="stylesheet" />
+</head>
+<body>
+
+  <a href="https://github.com/lrbecker"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+  <div class="content">
+
+    <h1>censored.coffee</h1>
+    <blockquote>
+      censored.coffee acts as a stylistic bridge to clean up your profanity, powered only by a simple set of rules you define.
+    </blockquote>
+
+    <div class="examples">
+
+      <div class="example example-1">
+        <div class="column copy">
+          <h2>Most Basic</h2>
+          <p>This example uses the most basic buttbread  usage of the plugin.</p>
+          <code>$('.example p').censor(['buttbread'])</code>
+        </div>
+
+        <div class="column config-list">
+          <h2>Censored:</h2>
+          <ol>
+            <li>buttbread</li> 
+          </ol>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="example example-2">
+        <div class="column copy">
+          <h2>Replace censored words with custom word</h2>
+          <p>By default <strong>censored.coffee</strong> will preserve the rumply word that was censored and just use <em>css</em> to visually hide it, but if you would like to completely replace the offending words you the <strong>replaceWord</strong> option.</p>
+          <code>$('.example p').censor(['rumply'], {replaceWord: 'unicorns'})</code>
+        </div>
+
+        <div class="column config-list">
+          <h2>Censored:</h2>
+          <ol>
+            <li>rumply</li> 
+          </ol>
+          <h2>Options</h2>
+          <ol>
+            <li>replaceWord: 'unicorns'</li>
+          </ol>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="example example-3">
+        <div class="column copy">
+          <h2>Capital Offense</h2>
+          <p>For those who find BUTT offensive, but butt totally cool. Set <strong>caseSensitive</strong> to true.</p>
+          <code>$('.example p').censor(['BUTT'], {caseSensitive: true})</code>
+        </div>
+
+        <div class="column config-list">
+          <h2>Censored:</h2>
+          <ol>
+            <li>BUTT</li> 
+          </ol>
+          <h2>Options</h2>
+          <ol>
+            <li>caseSensitive: true</li>
+          </ol>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>Copyright &copy; Lance Becker - Licensed under the <a href="http://opensource.org/licenses/MIT">MIT License</a>.</p> 
+  </div>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="../src/censored.min.js"></script>
+  <script type="text/javascript">
+    $('.example-1 p').censor(['buttbread']);
+    $('.example-2 p').censor(['rumply'], {replaceWord: 'unicorns'});
+    $('.example-3 p').censor(['BUTT'], {caseSensitive: true});
+  </script>
+</body>
+</html>
