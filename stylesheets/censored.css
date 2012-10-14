@@ -1,0 +1,21 @@
+.censored {
+  display:inline-block;
+  background-color:#000;
+  color:#000;
+  padding:5px 10px;
+  margin:0 10px;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -o-transform:rotate(-2deg);
+  -ms-transform:rotate(-2deg);
+}
+
+.censored::-moz-selection {
+  background-color: #000;
+  color: #000;
+}
+
+.censored::selection {
+  background-color: #000;
+  color: #000;
+}
